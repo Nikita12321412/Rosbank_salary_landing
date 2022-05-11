@@ -17,7 +17,7 @@ let path = {
     },
 
     src: {
-        html: source_folder + '/',
+        html: source_folder + '/*.html',
         css: source_folder + '/css/style.css',
         js: source_folder + '/js/script.js',
         img: source_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
@@ -56,15 +56,39 @@ const css = () => {
 
 function getting_html() {
     return gulp.src(path.src.html)
-        .pipe(gulp.dest(path.build.html))
+        .pipe(gulp.dest('dist/html'))
         .pipe(browserSync.stream())
+        .pipe(gulp.dest('dist/html'))
 }
 
 
-let build = gulp.series(getting_html)
-let watch = gulp.parallel(Sync)
+function js() {
+    return gulp.src(path.src.js)
+        .pipe(gulp.dest('dist/js'))
+        .pipe(browserSync.stream())
+        .pipe(gulp.dest('dist/js'))
+}
 
-exports.html = getting_html
+
+function img() {
+    return gulp.src(path.src.img)
+        .pipe(gulp.dest('dist/img'))
+        .pipe(browserSync.stream())
+        .pipe(gulp.dest('dist/img'))
+}
+
+
+function fonts() {
+    return gulp.src(path.src.fonts)
+        .pipe(gulp.dest('dist/fonts'))
+        .pipe(browserSync.stream())
+        .pipe(gulp.dest('dist/fonts'))
+}
+
+
+let build = gulp.series(getting_html, css, js, img, fonts)
+let watch = gulp.parallel(build, Sync)
+
+
 exports.build = build
-exports.css = css
 exports.default = watch
