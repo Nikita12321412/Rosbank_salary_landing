@@ -1,0 +1,40 @@
+.mortgage-process {
+	height: 500px;
+	background: #F9F9F9;
+	margin-top: 80px;
+}
+
+
+.process-description {
+	margin-top: 75px;
+}
+
+
+.mortgage-process__picture {
+	width: 50%;
+	height: 500px;
+	background: url(../img/mortgage-process.jpg);
+	background-size: cover;
+
+}
+
+
+.mortgage-process__content {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.mortgage-process__advantages__about {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+
+.advantages-description {
+	margin-left: 75px;
+	font-weight: 400;
+	font-size: 14px;
+	color: #292D3E;
+}

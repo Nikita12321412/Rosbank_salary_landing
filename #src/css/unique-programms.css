@@ -1,0 +1,59 @@
+.unique-programms {
+	margin-top: 86px;
+}
+
+
+.unique-programms-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
+.unique-programm {
+	width: 335px;
+	margin-right: 44px;
+	margin-bottom: 100px;
+}
+
+
+.unique-programm__number {
+	font-weight: 400;
+	font-size: 50px;
+	color: #E6E6E6;
+	margin: 0 0 27px;
+
+
+}
+
+
+.unique-programm__name {
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+	margin: 0 0 45px;
+
+	color: #C2002A;
+}
+
+
+.unique-programm__short-description {
+	display: flex;
+	align-items: center;
+}
+
+
+.vertical-line {
+	width: 3px;
+	height: 52px;
+	background: #E5E5E5;
+	margin-right: 20px;
+}
+
+
+.unique-programm__description {
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 20px;
+	color: #79797E;
+	margin: 0;
+}

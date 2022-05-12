@@ -1,0 +1,225 @@
+@media (max-width: 1148px) {
+	.container {
+		max-width: 970px;
+	}
+	.header-burger {
+		display: none;
+	}
+}
+
+
+@media (max-width: 992px) {
+	.container {
+		max-width: 750px;
+	}
+	.header img {
+		max-width: 200px !important;
+	}
+	.header p {
+		font-size: 14px;
+	}
+	.header-burger {
+		display: none;
+	}
+	.h2 {
+		margin-bottom: 40px !important;
+	}
+	.top-banner__info {
+		width: 360px !important;
+		height: 360px !important;
+	}
+	.mortgage-process {
+		height: 450px !important;
+	}
+	.programm-description {
+		flex: 1 1 50%;
+	}
+	.mortgage-process__picture {
+		display: none;
+	}
+	.mortgage-process__content br {
+		display: none;
+	}
+	.mortgage-process__advantages__about p {
+		margin-left: 25px;
+	}
+	.unique-programm {
+		flex: 1 1 40%;
+	}
+	.applying-details__header {
+		padding: 20px 0 45px;
+	}
+	.applying-details__header {
+		font-size: 26px !important;
+	}
+	.applying-details__discount-size {
+		font-size: 34px !important;
+	}
+	.convenient-service__phone {
+		flex: 0 0 50%;
+	}
+	.convenient-service__details {
+		flex: 0 0 50%;
+	}
+	.convenient-service__details p {
+		font-size: 16px !important;
+		padding-bottom: 15px !important;
+	}
+	.convenient-service__non-comission__bullet-point {
+		margin-bottom: 0 !important;
+	}
+	.make-next-step {
+		top: -130px !important;
+	}
+	.logo-bottom {
+		bottom: 100px !important;
+	}
+}
+
+@media (max-width: 767px) {
+	.container {
+		max-width: none;
+	}
+
+	.content {
+		padding-top: 80px;
+	}
+
+	.consultant, .phone-number {
+		display: none !important;
+	}
+
+	.header-burger {
+		display: block !important;
+		position: relative;
+		width: 30px;
+		height: 20px;
+	}
+
+
+	.header-burger span {
+		position: absolute;
+		background-color: #292D3E;
+		height: 2px;
+		width: 100%;
+		top: 9px;
+		right: 0;
+	}
+
+	.header-burger:before,
+	.header-burger:after {
+		content: "";
+		background-color: #292D3E;
+		position: absolute;
+		height: 2px;
+		width: 100%;
+		right: 0;
+	}
+
+	.header-burger:before {
+		top: 0;
+	}
+	.header-burger:after {
+		bottom: 0;
+	}
+
+	.top-banner {
+		height: 60vh !important;
+	}
+
+	.top-banner__info {
+		width: 300px !important;
+		height: 300px !important;
+		margin: 0 auto;
+	}
+
+	.programm-description {
+		flex: 0 0 100%;
+	}
+	.convenient-service__description {
+		display: flex;
+	}
+
+
+	.unique-programm:not(:last-child) {
+		margin-bottom: 50px !important;
+	}
+
+	.unique-programm__number {
+		margin-bottom: 15px !important;
+	}
+
+	.unique-programm__name {
+		margin-bottom: 25px !important;
+	}
+
+	.applying-details {
+		height: 850px !important;
+	}
+
+	.applying-details__header {
+		padding-bottom: 40px !important;
+	}
+
+	.applying-for-mortgage {
+		height: 850px !important;
+	}
+
+
+	.step-detail {
+		padding-bottom: 10px;
+	}	
+
+	.applying-details__discount-size {
+		line-height: 45px !important;
+		margin: 10px auto 30px !important;
+	}
+
+	.steps {
+		flex-direction: column;
+	}
+
+	.convenient-service__description {
+		display: block !important;
+	}
+
+	.convenient-service__phone {
+		display: none;
+	}
+
+	.make-next-step {
+		position: inherit !important;
+		margin-top: 50px !important;
+		height: unset !important;
+	}
+
+	.make-next-step__description {
+		flex-direction: column;
+		margin: 30px 0 !important;
+	}
+
+
+	.make-next-step__header {
+		align-self: flex-start !important;
+	}
+
+	.make-next-step__button {
+		margin-top: 50px !important;
+	}
+
+	.logo-bottom {
+		position: inherit !important;
+		margin-top: 50px !important;
+	}
+
+	.bottom-line {
+		position: inherit !important;
+		margin-top: 50px !important;
+	}
+
+	.footer-text {
+		position: inherit !important;
+		margin: 50px 0 !important;
+	}
+
+}

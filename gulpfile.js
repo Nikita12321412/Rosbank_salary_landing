@@ -3,6 +3,10 @@ const browserSync = require('browser-sync');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cleanCSS = require('gulp-clean-css');
+const imagemin = require('gulp-imagemin');
+const concatCss = require('gulp-concat-css');
+
+
 
 let project_folder = 'dist'
 let source_folder = '#src'
@@ -18,7 +22,7 @@ let path = {
 
     src: {
         html: source_folder + '/*.html',
-        css: source_folder + '/css/style.css',
+        css: source_folder + '/css/*.css',
         js: source_folder + '/js/script.js',
         img: source_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
         fonts: source_folder + '/fonts/*.ttf'
@@ -46,7 +50,7 @@ const Sync = () => {
     gulp.watch(`./**`).on('change', browserSync.reload)
 }
 
-const css = () => {
+const cssClean = () => {
     return gulp.src(path.src.css)
         .pipe(gulp.dest('dist/css'))
         .pipe(cleanCSS({compatibility: 'ie8'}))
@@ -70,14 +74,6 @@ function js() {
 }
 
 
-function img() {
-    return gulp.src(path.src.img)
-        .pipe(gulp.dest('dist/img'))
-        .pipe(browserSync.stream())
-        .pipe(gulp.dest('dist/img'))
-}
-
-
 function fonts() {
     return gulp.src(path.src.fonts)
         .pipe(gulp.dest('dist/fonts'))
@@ -86,7 +82,33 @@ function fonts() {
 }
 
 
-let build = gulp.series(getting_html, css, js, img, fonts)
+const concat = () => {
+    return gulp.src(path.src.css)
+      .pipe(concatCss("styles.css"))
+      .pipe(gulp.dest('dist/css'))
+      .pipe(gulp.dest('#src/css'));
+  };
+
+
+
+const optimizeImages = () => {
+    return gulp.src(path.src.img)
+        .pipe(imagemin([
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.mozjpeg({quality: 75, progressive: true}),
+            imagemin.optipng({optimizationLevel: 5}),
+            imagemin.svgo({
+                plugins: [
+                    {removeViewBox: true},
+                    {cleanupIDs: false}
+                ]
+            })
+        ]))
+        .pipe(gulp.dest('dist/img'));
+  };
+
+
+let build = gulp.series(concat, cssClean, js, fonts, optimizeImages, getting_html)
 let watch = gulp.parallel(build, Sync)
 
 

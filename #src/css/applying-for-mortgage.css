@@ -1,0 +1,98 @@
+.applying-for-mortgage {
+	height: 700px;
+	background: #F9F9F9;
+}
+
+
+.applying-details {
+	position: relative;
+	top: -75px;
+	height: 650px;
+	background: #FFFFFF;
+}
+
+
+.steps {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 50px;
+
+}
+
+
+.step-detail img {
+	display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+
+.applying-details__header {
+	padding: 40px 0 75px;
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 37px;
+	text-align: center;
+	color: #292D3E;
+}
+
+
+.applying-details__possibility {
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 18px;
+	color: #292D3E;
+	text-align: center;
+	margin: 0;
+
+}
+
+
+.step-detail__description {
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 18px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #292D3E;
+}
+
+
+.applying-details__discount-size {
+	font-weight: 700;
+	font-size: 45px;
+	line-height: 55px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #292D3E;
+	margin: 0 0 60px;
+}
+
+
+.button-small {
+	width: 230px;
+	height: 55px;
+	background: #C2002A;
+	box-shadow: 2px 10px 10px rgba(71, 1, 12, 0.3);
+	border-radius: 31.2443px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+
+.applying-details__button {
+	margin: 0;
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 18px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	text-decoration: none;
+	padding: 18px 32px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}

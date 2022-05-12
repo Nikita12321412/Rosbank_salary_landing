@@ -1,0 +1,33 @@
+.convenient-service {
+	margin-top: 80px;
+	position: relative;
+	z-index: 2;
+}
+
+.h4 {
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+	color: #292D3E;
+	padding-bottom: 40px;
+}
+
+.convenient-service__description {
+	display: flex;
+	justify-content: center;
+}
+
+
+.convenient-service__non-comission__marker {
+	margin-right: 20px;
+	width: 23px;
+	height: 23px;
+	background: url(../img/check-mark.png)
+}
+
+
+.convenient-service__non-comission__bullet-point {
+	display: flex;
+	align-items: center;
+	margin-bottom: 15px;
+}
