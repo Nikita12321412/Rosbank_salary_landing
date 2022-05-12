@@ -9,7 +9,7 @@ const concatCss = require('gulp-concat-css');
 
 
 let project_folder = 'dist'
-let source_folder = '#src'
+let source_folder = 'src'
 
 let path = {
     build: {
@@ -51,7 +51,7 @@ const Sync = () => {
 }
 
 const cssClean = () => {
-    return gulp.src(path.src.css)
+    return gulp.src('src/css/styles.css')
         .pipe(gulp.dest('dist/css'))
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest('dist/css'))
@@ -86,7 +86,7 @@ const concat = () => {
     return gulp.src(path.src.css)
       .pipe(concatCss("styles.css"))
       .pipe(gulp.dest('dist/css'))
-      .pipe(gulp.dest('#src/css'));
+      .pipe(gulp.dest('src/css'));
   };
 
 
