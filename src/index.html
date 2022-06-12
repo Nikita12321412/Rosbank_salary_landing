@@ -320,7 +320,7 @@
         </div>
     </div>
 
-    <div class="logo-bottom">
+    <div class="logo-bottom" id="pop-up-show">
         <div class="container">
             <img src="img/logo-mini.png" alt="logo">
         </div>
@@ -340,7 +340,47 @@
                 лицензия ЦБ РФ №2272 от 28.01.2015 г. Реклама.</p>
         </div>
     </div>
+
+    <div class="pop-up" id="pop-up">
+        <div class="pop-up-container">
+            <div class="pop-up-body">
+                <div class="pop-up__banner">
+                    <div class="close" id="pop-up-close">
+                    </div>
+                    <div class="banner-content">
+                        <p class="banner-content__header">Успейте оформить ипотеку <br>до повышения ставок!
+                        </p>
+                        <img src="img/timer-pop-up.png" alt="timer">
+                    </div>
+                    <div>
+                        <img class="banner-image" src="img/image.png" alt="girl">
+                    </div>
+                </div>
+            <div class="pop-up__inputs">
+                <div class="pop-up__inputs__content">
+                    <div class="form-inputs">
+                        <input class="pop-up__field" type="text" placeholder="Фамилия*">
+                        <input class="pop-up__field" type="text" placeholder="Имя*">
+                        <input class="pop-up__field" type="text" placeholder="Отчество*">
+                        <input class="pop-up__field" type="text" placeholder="Номер телефона*">
+                        <input class="pop-up__field" type="text" placeholder="Регион обращения*">
+                        <div class="pop-up__agreement">
+                            <input id="checkbox" class="check-box" type="checkbox" value="agreement">
+                            <div class="agreement-text"></div><label for="checkbox" class="agreement-text">с условиями обработки персональных данных согласен*</label></div>
+                    </div>
+                    <div>
+                        <a class="button" href="#">отправить заявку</a>
+                    </div>
+                    <div>
+                        <p class="legal-text">* обязательные к заполнению поля</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
+<script src="js/script.js"></script>
 </body>
 </html>
 
