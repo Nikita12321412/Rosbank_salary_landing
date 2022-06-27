@@ -1557,6 +1557,951 @@ input[type="text"] {
 
 .pop-up {
   width: 100%;
+  height: 120%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  transform: translateY(-5%);
+  transition: .5s ease-in-out;
+  visibility: hidden;
+}
+
+.pop-up.active {
+  transform: translateY(0%);
+  background-color: rgba(0, 0, 0, .7);
+  visibility: visible;
+}
+
+.close {
+  height: 35px;
+  width: 35px;
+  background: url("../img/close.png");
+  cursor: pointer;
+  z-index: 30;
+}
+
+.pop-up-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.pop-up-body {
+  margin: auto;
+  width: 750px;
+  height: 700px;
+  background: #F5F5F5;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bg {
+  width: 100%;
+}
+
+.pop-up__banner {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 0 0 40px;
+}
+
+.banner-content__header {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+  color: #282423;
+  margin-bottom: 50px;
+}
+
+.banner-image {
+  position: absolute;
+  height: 530px;
+  left: 250px;
+  top: -35px;
+}
+
+.banner-content img {
+  width: 75%;
+}
+
+.pop-up__inputs {
+  background: #E9E9E9;
+  width: 100%;
+  height: 350px;
+  z-index: 20;
+  border-radius: 20px;
+}
+
+.form-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.pop-up__inputs__content {
+  padding: 20px 40px;
+}
+
+.pop-up__field {
+  width: 310px;
+  height: 35px;
+  margin: 0 0 20px 0;
+  font-family: inherit;
+  background-color: #E9E9E9;
+  border: none;
+  border-bottom: 1px solid #000;
+}
+
+.pop-up__field::placeholder {
+  color: #212529;
+  opacity: 0.4;
+  padding: 5px 0 0 10px;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+.pop-up__field:focus {
+  font-family: sans-serif;
+  color: #212529;
+  background-color: #E9E9E9;
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+  padding: 5px 0 0 10px;
+  color: rgb(9, 9, 9);
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input:focus:-moz-placeholder {
+  color: transparent;
+}
+
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.pop-up__agreement {
+  width: 310px;
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.agreement-text {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  padding-left: 2px;
+}
+
+.button {
+  margin: 20px auto 0;
+}
+
+.button:hover {
+  background-color: #E9041E;
+  color: #fff;
+  transition: .3s ease-out;
+}
+
+.legal-text {
+  margin: 40px auto 0;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.pop-up__button {
+  display: flex;
+}
+
+.available-rates__header {
+  margin-top: 86px;
+}
+
+.header-3 {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  color: #52595F;
+}
+
+.header-3__line {
+  width: 50px;
+  height: 1px;
+  margin-left: 13px;
+  background: #C2002A;
+}
+
+.header-3__line__white {
+  width: 50px;
+  height: 1px;
+  margin-left: 13px;
+  background: #FFFFFF;
+}
+
+.h3-line {
+  display: flex;
+  align-items: center;
+}
+
+.salary-clients-conditions__h2 {
+  margin-top: 10px;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.mortgage-programms {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.programm-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid #EEEEEE;
+  box-sizing: border-box;
+  width: 287px;
+  height: 312px;
+  left: 387px;
+  top: 1087px;
+}
+
+.programm-description:hover {
+  background: #C2002A;
+}
+
+.programm-description:hover .rate {
+  color: #ffffff;
+}
+
+.programm-description:hover .rate_red {
+  color: #ffffff;
+}
+
+.programm-description:hover .state-programm {
+  color: #ffffff;
+}
+
+.programm-description:hover .programm-name {
+  color: #ffffff;
+}
+
+.programm-description:hover .programm-description__img {
+  background: url("../img/child2.svg");
+  background-repeat: no-repeat;
+}
+
+.rate {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 37px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.rate_red {
+  color: red;
+}
+
+.state-programm {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  color: #52595F;
+  padding-bottom: 5px;
+}
+
+.programm-description__img {
+  width: 59px;
+  height: 59px;
+  background: url("../img/child1.svg");
+}
+
+.programm-name {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #292D3E;
+}
+
+.salary-clients-conditions {
+  background: #292D3E;
+  padding: 50px 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #292D3E;
+  line-height: 1.6;
+  position: relative;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.applying-for-mortgage {
+  height: 700px;
+  background: #F9F9F9;
+}
+
+.applying-details {
+  position: relative;
+  top: -75px;
+  height: 650px;
+  background: #FFFFFF;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.step-detail img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.applying-details__header {
+  padding: 40px 0 75px;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+  text-align: center;
+  color: #292D3E;
+}
+
+.applying-details__possibility {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #292D3E;
+  text-align: center;
+  margin: 0;
+}
+
+.step-detail__description {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #292D3E;
+}
+
+.applying-details__discount-size {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 55px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #292D3E;
+  margin: 0 0 60px;
+}
+
+.button-small {
+  width: 230px;
+  height: 55px;
+  background: #C2002A;
+  box-shadow: 2px 10px 10px rgba(71, 1, 12, 0.3);
+  border-radius: 31.2443px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.applying-details__button {
+  margin: 0;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 18px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-banner {
+  width: 100%;
+  height: 80vh;
+  background: url("../img/image.jpg") right;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.h2 {
+  margin-top: 10px;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+  color: #292D3E;
+}
+
+.top-banner__info {
+  width: 460px;
+  height: 460px;
+  background: #C2002A;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.description {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.first-line {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0em;
+  margin: 0;
+  padding-bottom: 12px;
+}
+
+.second-line {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0em;
+  margin: 0;
+  padding-bottom: 8px;
+}
+
+.third-line {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0em;
+  margin: 0;
+}
+
+.button {
+  display: inline-block;
+  vertical-align: top;
+  background: #FFFFFF;
+  width: 232px;
+  height: 55px;
+  box-shadow: 2px 10px 10px rgba(71, 1, 12, 0.3);
+  border-radius: 31px;
+  border: 4px solid #FFFFFF;
+  text-decoration: none;
+  color: #292D3E;
+  text-align: center;
+  padding: 13px 31px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+.button:hover {
+  background: #C2002A;
+  border: 4px solid #FFFFFF;
+  box-shadow: 2px 10px 10px rgba(71, 1, 12, 0.3);
+  color: #FFFFFF;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+}
+
+.bottom-line {
+  width: 100%;
+  height: 1px;
+  background: #C4C4C4;
+  margin-top: 50px;
+}
+
+.convenient-service {
+  margin-top: 80px;
+  position: relative;
+  z-index: 2;
+}
+
+.h4 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #292D3E;
+  padding-bottom: 40px;
+}
+
+.convenient-service__description {
+  display: flex;
+  justify-content: center;
+}
+
+.convenient-service__non-comission__marker {
+  margin-right: 20px;
+  width: 23px;
+  height: 23px;
+  background: url("../img/check-mark.png");
+}
+
+.convenient-service__non-comission__bullet-point {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.footer-text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+  color: #000000;
+  opacity: 0.5;
+  margin-top: 50px;
+}
+
+.header {
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 18px;
+  background: #fff;
+  position: fixed;
+  z-index: 10;
+  box-shadow: 2px 10px 10px rgb(175 175 175 / 30%);
+}
+
+.header .logo {
+  flex-basis: 33.3%;
+}
+
+.header .consultant {
+  flex-basis: 33.3%;
+  text-align: center;
+}
+
+.consultant a {
+  text-decoration: none;
+  color: #292D3E;
+}
+
+.header .phone-number {
+  flex-basis: 33.3%;
+  text-align: end;
+}
+
+.phone-number a {
+  text-decoration: none;
+  color: #292D3E;
+}
+
+.header img {
+  max-width: 270px;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-burger {
+  display: none;
+}
+
+.logo-bottom {
+  margin-top: 50px;
+}
+
+.make-next-step {
+  height: 300px;
+  background: #292D3E;
+  display: flex;
+  align-items: center;
+  margin-top: -170px;
+}
+
+.make-next-step__header h2 {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.make-next-step__button {
+  width: 270px;
+  height: 70px;
+  background: #E3334E;
+  box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 35px;
+}
+
+.make-next-step__description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.make-next-step__button__text {
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 23px 37px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1148px) {
+  .container {
+    max-width: 970px;
+  }
+
+  .header-burger {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px;
+  }
+
+  .header img {
+    max-width: 200px !important;
+  }
+
+  .header p {
+    font-size: 14px;
+  }
+
+  .header-burger {
+    display: none;
+  }
+
+  .h2 {
+    margin-bottom: 40px !important;
+  }
+
+  .top-banner__info {
+    width: 360px !important;
+    height: 360px !important;
+  }
+
+  .mortgage-process {
+    height: 450px !important;
+  }
+
+  .programm-description {
+    flex: 1 1 50%;
+  }
+
+  .mortgage-process__picture {
+    display: none;
+  }
+
+  .mortgage-process__content br {
+    display: none;
+  }
+
+  .mortgage-process__advantages__about p {
+    margin-left: 25px;
+  }
+
+  .unique-programm {
+    flex: 1 1 40%;
+  }
+
+  .applying-details__header {
+    padding: 20px 0 45px;
+  }
+
+  .applying-details__header {
+    font-size: 26px !important;
+  }
+
+  .applying-details__discount-size {
+    font-size: 34px !important;
+  }
+
+  .convenient-service__phone {
+    flex: 0 0 50%;
+  }
+
+  .convenient-service__details {
+    flex: 0 0 50%;
+  }
+
+  .convenient-service__details p {
+    font-size: 16px !important;
+    padding-bottom: 15px !important;
+  }
+
+  .convenient-service__non-comission__bullet-point {
+    margin-bottom: 0 !important;
+  }
+
+  .make-next-step {
+    top: -130px !important;
+  }
+
+  .logo-bottom {
+    bottom: 100px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: none;
+  }
+
+  .content {
+    padding-top: 80px;
+  }
+
+  .consultant,
+  .phone-number {
+    display: none !important;
+  }
+
+  .header-burger {
+    display: block !important;
+    position: relative;
+    width: 30px;
+    height: 20px;
+  }
+
+  .header-burger span {
+    position: absolute;
+    background-color: #292D3E;
+    height: 2px;
+    width: 100%;
+    top: 9px;
+    right: 0;
+  }
+
+  .header-burger:before,
+  .header-burger:after {
+    content: "";
+    background-color: #292D3E;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    right: 0;
+  }
+
+  .header-burger:before {
+    top: 0;
+  }
+
+  .header-burger:after {
+    bottom: 0;
+  }
+
+  .top-banner {
+    height: 60vh !important;
+  }
+
+  .top-banner__info {
+    width: 300px !important;
+    height: 300px !important;
+    margin: 0 auto;
+  }
+
+  .programm-description {
+    flex: 0 0 100%;
+  }
+
+  .convenient-service__description {
+    display: flex;
+  }
+
+  .unique-programm:not(:last-child) {
+    margin-bottom: 50px !important;
+  }
+
+  .unique-programm__number {
+    margin-bottom: 15px !important;
+  }
+
+  .unique-programm__name {
+    margin-bottom: 25px !important;
+  }
+
+  .applying-details {
+    height: 850px !important;
+  }
+
+  .applying-details__header {
+    padding-bottom: 40px !important;
+  }
+
+  .applying-for-mortgage {
+    height: 850px !important;
+  }
+
+  .step-detail {
+    padding-bottom: 10px;
+  }
+
+  .applying-details__discount-size {
+    line-height: 45px !important;
+    margin: 10px auto 30px !important;
+  }
+
+  .steps {
+    flex-direction: column;
+  }
+
+  .convenient-service__description {
+    display: block !important;
+  }
+
+  .convenient-service__phone {
+    display: none;
+  }
+
+  .make-next-step {
+    position: inherit !important;
+    margin-top: 50px !important;
+    height: unset !important;
+  }
+
+  .make-next-step__description {
+    flex-direction: column;
+    margin: 30px 0 !important;
+  }
+
+  .make-next-step__header {
+    align-self: flex-start !important;
+  }
+
+  .make-next-step__button {
+    margin-top: 50px !important;
+  }
+
+  .logo-bottom {
+    position: inherit !important;
+    margin-top: 50px !important;
+  }
+
+  .bottom-line {
+    position: inherit !important;
+    margin-top: 50px !important;
+  }
+
+  .footer-text {
+    position: inherit !important;
+    margin: 50px 0 !important;
+  }
+}
+
+.mortgage-process {
+  height: 500px;
+  background: #F9F9F9;
+  margin-top: 80px;
+}
+
+.process-description {
+  margin-top: 75px;
+}
+
+.mortgage-process__picture {
+  width: 50%;
+  height: 500px;
+  background: url("../img/mortgage-process.jpg");
+  background-size: cover;
+}
+
+.mortgage-process__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mortgage-process__advantages__about {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.advantages-description {
+  margin-left: 75px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #292D3E;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+input[type="text"] {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.pop-up {
+  width: 100%;
   height: 100%;
   position: fixed;
   left: 0;
@@ -2816,6 +3761,67 @@ input:focus:-ms-input-placeholder {
 .salary-clients-conditions {
   background: #292D3E;
   padding: 50px 0;
+}
+
+.unique-programms {
+  margin-top: 86px;
+}
+
+.unique-programms-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.unique-programm {
+  width: 335px;
+  margin-right: 44px;
+  margin-bottom: 100px;
+}
+
+.unique-programm__number {
+  font-weight: 400;
+  font-size: 50px;
+  color: #E6E6E6;
+  margin: 0 0 27px;
+}
+
+.unique-programm__name {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0 0 45px;
+  color: #C2002A;
+}
+
+.unique-programm__short-description {
+  display: flex;
+  align-items: center;
+}
+
+.vertical-line {
+  width: 3px;
+  height: 52px;
+  background: #E5E5E5;
+  margin-right: 20px;
+}
+
+.unique-programm__description {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #79797E;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1208px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.content {
+  padding-top: 95px;
 }
 
 .unique-programms {
