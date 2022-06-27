@@ -29,7 +29,7 @@
 .close {
     height: 35px;
     width: 35px;
-    background-image: url(img/close.png);
+    background: url(../img/close.png);
     cursor: pointer;
     z-index: 30;
 }
@@ -168,7 +168,6 @@ input:focus:-ms-input-placeholder { color:transparent; }
 
 .button {
     margin: 20px auto 0;
-
 }
 
 
@@ -186,4 +185,8 @@ input:focus:-ms-input-placeholder { color:transparent; }
     font-weight: 400;
     font-size: 12px;
     line-height: 15px;
+}
+
+.pop-up__button {
+    display: flex;
 }
