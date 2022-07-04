@@ -166,16 +166,46 @@ input:focus:-ms-input-placeholder { color:transparent; }
     padding-left: 2px;
 }
 
-.button {
-    margin: 20px auto 0;
+.button-text {
+    margin: 22px auto;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
 }
 
 
-.button:hover {
+.pop-up__button {
+    margin: 10px auto 0;
+    padding: 22px 41px;
+    width: 255px;
+    height: 65px;
+    border: 2px solid #E9041E;
+    border-radius: 35px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+  }
+
+
+.pop-up__button:hover {
     background-color: #E9041E;
     color: #fff;
     transition: .3s ease-out;
-}
+  }
 
 
 .legal-text {
@@ -185,8 +215,4 @@ input:focus:-ms-input-placeholder { color:transparent; }
     font-weight: 400;
     font-size: 12px;
     line-height: 15px;
-}
-
-.pop-up__button {
-    display: flex;
 }
