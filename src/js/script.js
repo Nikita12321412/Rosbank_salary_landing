@@ -3,12 +3,7 @@ const popUpShow = document.querySelector('body');
 const popUpClose = document.getElementById('pop-up-close');
 const popUpContainer = document.getElementById('pop-up-container')
 
-let date = new Date ('10 July 2022 23:56:00')
-
-popUpShow.addEventListener('mouseleave', function(e){
-    e.preventDefault();
-    popUp.classList.add('active');
-});
+let date = new Date ('25 July 2022 12:45:00')
 
 
 popUpClose.addEventListener('click', () => {
@@ -34,6 +29,10 @@ function popUpTimer () {
         document.getElementById('timer-header').innerText = 'Оставьте заявку';
         document.getElementById('pop-up__values').innerText = '';
     } else {
+    popUpShow.addEventListener('mouseleave', function(e){
+        e.preventDefault();
+        popUp.classList.add('active');
+    });
     document.getElementById('days').innerText = days;
     document.getElementById('hours').innerText = hours;
     document.getElementById('minutes').innerText = minutes;
